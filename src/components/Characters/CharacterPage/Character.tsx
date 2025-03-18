@@ -20,6 +20,7 @@ type Inputs = {
 const schema = yup.object({
     name: yup.string().required().min(1),
     height: yup.string().required().min(1),
+    mass: yup.string().required().min(1),
     hair_color: yup.string().required().min(1),
     skin_color: yup.string().required().min(1),
     eye_color: yup.string().required().min(1),
@@ -39,7 +40,7 @@ const Character = () => {
     const [changeMode, setChangeMode] = useState<boolean>(false)
 
     // value of inputs connect to hook
-    const { register, handleSubmit, formState: { errors } } = useForm<Inputs>({ resolver: yupResolver(schema) })
+    const { register, handleSubmit } = useForm<Inputs>({ resolver: yupResolver(schema) })
 
     // get data
     useEffect(() => {
