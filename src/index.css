@@ -1,0 +1,139 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Sans";
+  src: url("./assets/fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Sans-B";
+  src: url("./assets/fonts/OpenSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Sans-Ex";
+  src: url("./assets/fonts/OpenSans-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Sans-M";
+  src: url("./assets/fonts/OpenSans-Medium.ttf");
+}
+:root {
+  font-family: "Sans";
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 0 3px #0000003e;
+}
+header a {
+  text-decoration: none;
+  color: #000;
+}
+
+.title {
+  font-size: 45px;
+  font-family: "Sans-Ex";
+  margin-bottom: 30px;
+}
+
+.container {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+  background: #fff;
+  box-shadow: 0 2px 3px #0000003e;
+  align-items: center;
+  border-radius: 33px;
+}
+
+/* login  */
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.login__form__inp {
+  padding: 10px 5px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+
+.login__form__inp:active,
+.login__form__inp:focus {
+  border-color: rgb(181, 181, 7);
+  outline: none;
+}
+.login__form__btn {
+  width: 100%;
+  background: transparent;
+  padding: 10px 0;
+  font-family: "Sans-B";
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.characters__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+}
+.characters__list__item {
+  border: 1px solid black;
+  border-radius: 10px;
+  transition: all 0.7s;
+  text-align: center;
+  min-width: 200px;
+}
+.characters__list__item:hover {
+  background: #000;
+}
+.characters__list__item:hover .character__inf {
+  color: #fff;
+}
+
+.character__inf {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  color: #000;
+}
+.characters__pagination {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 30px;
+}
+.characters__pagination button {
+  background: transparent;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.characters__pagination button:disabled {
+  background: grey;
+  cursor: auto;
+  border: none;
+}
